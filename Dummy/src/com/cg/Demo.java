@@ -7,6 +7,7 @@ public class Demo {
 System.out.println("Hello\n");
 System.out.println("Welcome there!");
 System.out.println("***********");
+System.out.println("update");
 	}
 
 }
