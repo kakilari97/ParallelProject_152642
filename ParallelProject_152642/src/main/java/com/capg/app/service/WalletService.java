@@ -1,52 +1,50 @@
 package com.capg.app.service;
 
-import com.capg.app.bean.CustomerDetails;
+import com.capg.app.bean.AccountDetails;
+//import com.capg.app.bean.CustomerDetails;
+import com.capg.app.dao.WalletDAO;
 
-public class WalletService implements IWalletService{
 
-	public boolean createAccount(CustomerDetails details) {
-		// TODO Auto-generated method stub
-		return false;
+
+public class WalletService implements IWalletService {
+
+	WalletDAO pd = new WalletDAO();
+
+	public boolean createAccount(AccountDetails details) {
+
+		return pd.createAccount(details);
 	}
 
-	public boolean walletLogin(CustomerDetails details) {
-		// TODO Auto-generated method stub
-		return false;
+	public AccountDetails showBalance(AccountDetails details) {
+
+		return pd.showBalance(details);
 	}
 
-	public boolean deposit() {
-		// TODO Auto-generated method stub
-		return false;
+	public AccountDetails depositBalance(double deposit, AccountDetails details) {
+
+		return pd.depositBalance(deposit, details);
+
 	}
 
-	public boolean withdraw(int i) {
-		// TODO Auto-generated method stub
-		return false;
+	public AccountDetails withdrawBalance(double withdraw, AccountDetails details) {
+
+		return pd.withdrawBalance(withdraw, details);
 	}
 
-	public boolean fundTransfer(int i) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public boolean printTransactions() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public void showBalance() {
-		// TODO Auto-generated method stub
+	public AccountDetails transferFund(long bankaccount2, double amount, AccountDetails details) {
+		
+		return pd.transferFund(bankaccount2, amount, details);
 		
 	}
 
-	public boolean withdraw() {
-		// TODO Auto-generated method stub
-		return false;
+//	public AccountDetails printTransaction(long transId, AccountDetails details) {
+		public AccountDetails printTransaction() {
+		
+			//return pd.printTransaction(transId, details);
+		return pd.printTransaction();
+		
 	}
 
-	public boolean fundTransfer() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 
 }

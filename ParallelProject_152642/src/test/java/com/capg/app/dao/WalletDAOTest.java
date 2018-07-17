@@ -1,64 +1,65 @@
 package com.capg.app.dao;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
 import org.junit.Test;
 
-import com.capg.app.bean.CustomerDetails;
+import com.capg.app.bean.AccountDetails;
 import com.capg.app.service.WalletService;
 
-import junit.framework.TestCase;
-
-public class WalletDAOTest extends TestCase{
-WalletService service=new WalletService();
-CustomerDetails details;
+public class WalletDAOTest {
+	WalletService service=new WalletService();
+	AccountDetails details=new AccountDetails();
 	@Test
 	public void testCreateAccount() {
+		assertTrue(true);
 		assertEquals(0,service.createAccount(details));
 		assertNull(details);
-		assertTrue(true);
 		assertNotSame(1,service.createAccount(details));
 	}
 
 	@Test
-	public void testWalletLogin() {
-		assertEquals(false,service.walletLogin(details));
-		assertNull(details);
-		assertTrue(true);
-		assertNotSame(1,service.walletLogin(details));
-		assertEquals(0,service.walletLogin(details));
+	public void testShowBalance() {
+		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testDeposit() {
-		assertEquals(0,service.deposit());
+	public void testDepositBalance() {
+		assertEquals(0,service.depositBalance(4000, details));
 		assertTrue(true);
 		assertNull(details);
 		assertNotSame(4000,details.getBalance());
 	}
 
 	@Test
-	public void testWithdraw() {
-		assertEquals(0,service.withdraw(2000));
+	public void testWithdrawBalance() {
+		assertEquals(0,service.withdrawBalance(2000, details));
 		assertFalse(false);
 		assertTrue(true);
 		assertNull(details);
 	}
+
 	@Test
-	public void testShowBalance() {
-		
+	public void testGetList() {
+		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testFundTransfer() {
-		assertEquals(0,service.fundTransfer(4000));
+	public void testTransferFund() {
+		assertEquals(0,service.transferFund(107895, 3000, details));
 		assertTrue(true);
 		assertNull(details.getBalance());
-		assertNotSame(1,service.fundTransfer(3000));
-		
+		assertNotSame(1,service.transferFund(90, 0, details));
 	}
 
 	@Test
-	public void testPrintTransactions() {
-		
+	public void testPrintTransaction() {
+		fail("Not yet implemented");
 	}
 
 }
