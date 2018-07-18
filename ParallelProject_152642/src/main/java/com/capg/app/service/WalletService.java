@@ -37,10 +37,9 @@ public class WalletService implements IWalletService {
 		
 	}
 
-//	public AccountDetails printTransaction(long transId, AccountDetails details) {
+
 		public AccountDetails printTransaction() {
 		
-			//return pd.printTransaction(transId, details);
 		return pd.printTransaction();
 		
 	}

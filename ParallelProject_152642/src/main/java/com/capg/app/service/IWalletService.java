@@ -14,8 +14,7 @@ public interface IWalletService {
 	public AccountDetails withdrawBalance(double withdraw,AccountDetails account);
 	
 	public AccountDetails transferFund(long bankaccount2, double amount, AccountDetails account);
-	
-//	public AccountDetails printTransaction(long transId, AccountDetails account);
+
 	public AccountDetails printTransaction();
 
 }

@@ -81,11 +81,3 @@ public class WalletDAO implements IWalletDAO {
 	}
 }
 
-//public AccountDetails printTransaction(long transId, AccountDetails account) {
-
-//for (AccountDetails x : accountInfo) {
-//	if (x.getTransactionId() == transId) {
-//		
-//					return x;
-//	}
-//}
