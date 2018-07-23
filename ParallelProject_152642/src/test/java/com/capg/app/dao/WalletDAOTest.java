@@ -30,7 +30,7 @@ public class WalletDAOTest {
 
 	@Test
 	public void testDepositBalance() {
-		assertEquals(0,service.depositBalance(4000, details));
+		assertEquals(0,service.deposit(4000));
 		assertTrue(true);
 		assertNull(details);
 		assertNotSame(4000,details.getBalance());
@@ -38,7 +38,7 @@ public class WalletDAOTest {
 
 	@Test
 	public void testWithdrawBalance() {
-		assertEquals(0,service.withdrawBalance(2000, details));
+		assertEquals(0,service.withdraw(2000));
 		assertFalse(false);
 		assertTrue(true);
 		assertNull(details);
@@ -51,10 +51,10 @@ public class WalletDAOTest {
 
 	@Test
 	public void testTransferFund() {
-		assertEquals(0,service.transferFund(107895, 3000, details));
+		assertEquals(0,service.fundTransfer(107895, 3000));
 		assertTrue(true);
 		assertNull(details.getBalance());
-		assertNotSame(1,service.transferFund(90, 0, details));
+		assertNotSame(1,service.fundTransfer(90, 0));
 	}
 
 	@Test

@@ -18,18 +18,6 @@ public class CustomerDetailsValidation {
 		Male, Female, M, F
 	}
 
-	public AccountDetails validateLogIn(String username, String password) {
-
-		List<AccountDetails> list = WalletDAO.getList();
-
-		for (AccountDetails details : list) {
-			if (details.getUserName().equalsIgnoreCase(username) && details.getPassword().equals(password)) {
-
-				return details;
-			}
-		}
-		return null;
-	}
 
 	public boolean validateConsumerName(String consumerName) {
 		String name_pattern = "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$";

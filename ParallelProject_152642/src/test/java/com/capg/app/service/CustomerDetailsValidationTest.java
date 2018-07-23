@@ -11,10 +11,6 @@ import com.capg.app.bean.CustomerDetails;
 public class CustomerDetailsValidationTest {
 	CustomerDetails details=new CustomerDetails();
 	CustomerDetailsValidation validate=new CustomerDetailsValidation();
-	@Test
-	public void testValidateLogIn() {
-		assertNull(validate.validateLogIn("Kavya", "Kavya5697"));
-	}
 
 	@Test
 	public void testValidateConsumerName() {

@@ -8,11 +8,11 @@ public class CustomerDetailsTest {
 CustomerDetails details=new CustomerDetails();
 	@Test
 	public void testGetConsumerName() {
-		details.setConsumerName("Oppo");
-		assertEquals("Oppo",details.getConsumerName());
-		assertTrue("Oppo".equals(details.getConsumerName()));
-		assertFalse("opopo897".equals(details.getConsumerName()));		
-		assertFalse("1yuf4".equals(details.getConsumerName()));
+		details.setFirstName("Oppo");
+		assertEquals("Oppo",details.getFirstName());
+		assertTrue("Oppo".equals(details.getFirstName()));
+		assertFalse("opopo897".equals(details.getFirstName()));		
+		assertFalse("1yuf4".equals(details.getFirstName()));
 	}
 
 	@Test
@@ -26,20 +26,20 @@ CustomerDetails details=new CustomerDetails();
 
 	@Test
 	public void testGetEmailId() {
-		details.setEmailId("oppo@gmail.com");
-		assertEquals("oppo@gmail.com",details.getEmailId());
-		assertTrue("oppo@gmail.com".equals(details.getEmailId()));
-		assertFalse("opopo897".equals(details.getEmailId()));	
-		assertFalse("oppo@gmailcom".equals(details.getEmailId()));
+		details.setEmail("oppo@gmail.com");
+		assertEquals("oppo@gmail.com",details.getEmail());
+		assertTrue("oppo@gmail.com".equals(details.getEmail()));
+		assertFalse("opopo897".equals(details.getEmail()));	
+		assertFalse("oppo@gmailcom".equals(details.getEmail()));
 	}
 
 	@Test
 	public void testGetPhoneNo() {
-		details.setPhoneNo("9898989898");
-		assertEquals("9898989898",details.getPhoneNo());
-		assertTrue("9898989898".equals(details.getPhoneNo()));
-		assertFalse("009998979".equals(details.getPhoneNo()));		
-		assertFalse("64565477fyfd".equals(details.getPhoneNo()));
+		details.setMobileNo("9898989898");
+		assertEquals("9898989898",details.getMobileNo());
+		assertTrue("9898989898".equals(details.getMobileNo()));
+		assertFalse("009998979".equals(details.getMobileNo()));		
+		assertFalse("64565477fyfd".equals(details.getMobileNo()));
 	}
 
 	@Test

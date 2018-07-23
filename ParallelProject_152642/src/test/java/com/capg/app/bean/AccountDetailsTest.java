@@ -18,10 +18,10 @@ public class AccountDetailsTest {
 
 	@Test
 	public void testGetUserName() {
-		account.setUserName("Oppo");
-		assertEquals("Oppo",account.getUserName());
-		assertTrue("Oppo".equals(account.getUserName()));
-		assertEquals("Oppo",account.getUserName());
+		account.setUsername("Oppo");
+		assertEquals("Oppo",account.getUsername());
+		assertTrue("Oppo".equals(account.getUsername()));
+		assertEquals("Oppo",account.getUsername());
 		//assertFalse("1yuf4".equals(account.getUserName()));
 	}
 
@@ -34,38 +34,20 @@ public class AccountDetailsTest {
 
 	@Test
 	public void testGetBankAccount() {
-		account.setBankAccount(106756);
-		assertTrue(106756==account.getBankAccount());
-		assertFalse(10676==account.getBankAccount());
-		assertFalse(3==account.getBankAccount());
+		account.setAccNo(106756);
+		assertTrue(106756==account.getAccNo());
+		assertFalse(10676==account.getAccNo());
+		assertFalse(3==account.getAccNo());
 	}
 
-	@Test
-	public void testGetTransactionId() {
-		account.setTransactionId(170975);
-		assertTrue(170975==account.getTransactionId());
-		assertFalse(98776==account.getTransactionId());
-		assertFalse(12==account.getTransactionId());
-		assertFalse(896==account.getTransactionId());
-		
-	}
-
-	@Test
-	public void testGetBankAccount2() {
-		account.setBankAccount2(109886);
-		assertTrue(109886==account.getBankAccount2());
-		assertFalse(9867==account.getBankAccount2());
-		assertFalse(222==account.getBankAccount2());
-		assertFalse(7887==account.getBankAccount2());
-	}
 
 	@Test
 	public void testGetAmount() {
-		account.setAmount(300);
-		assertTrue(300==account.getAmount());
-		assertFalse(4000==account.getAmount());		
-		assertFalse(7456==account.getAmount());
-		assertFalse(486300==account.getAmount());
+		account.setBalance(300);
+		assertTrue(300==account.getBalance());
+		assertFalse(4000==account.getBalance());		
+		assertFalse(7456==account.getBalance());
+		assertFalse(486300==account.getBalance());
 	}
 
 }

@@ -1,70 +1,65 @@
 package com.capg.app.bean;
 
 public class CustomerDetails {
+	private String firstName;
 
-	private String consumerName;
-
-	private int age;
-	private String emailId;
-
-	private String phoneNo;
-
-	private String gender;
-	
-
-	public String getConsumerName() {
-		return consumerName;
+	private String mobileNo;
+	private String email;
+	private long aadhar;
+	private String location;
+	@Override
+	public String toString() {
+		return "Customer [firstName=" + firstName + ", gender=" + gender + ", age=" + age
+				+ ", mobileNo=" + mobileNo + ", email=" + email + ", aadhar=" + aadhar + ", location=" + location + "]";
 	}
-
-	public void setConsumerName(String consumerName) {
-		this.consumerName = consumerName;
+	public String getFirstName() {
+		return firstName;
 	}
-
-	
-
-	public int getAge() {
-		return age;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public String getEmailId() {
-		return emailId;
-	}
-
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
-
-	
-	public String getPhoneNo() {
-		return phoneNo;
-	}
-
-	public void setPhoneNo(String phoneNo) {
-		this.phoneNo = phoneNo;
-	}
-
-	
-
 	
 	public String getGender() {
 		return gender;
 	}
-
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-	@Override
-	public String toString() {
-		return "CustomerDetails:\nconsumerName=" + consumerName + ",\\n age=" + age + ", \\nemailId=" + emailId + ",\\n phoneNo="
-				+ phoneNo + ", \\ngender=" + gender ;
+	public int getAge() {
+		return age;
 	}
-
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getMobileNo() {
+		return mobileNo;
+	}
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	private String gender;
+	private int age;
+	public long getAadhar() {
+		return aadhar;
+	}
+	public void setAadhar(long aadhar) {
+		this.aadhar = aadhar;
+	}
+	
+
 
 
 }
